@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="anchorpane" focusTraversable="true" maxHeight="400.0" maxWidth="600.0" minHeight="400.0"
+            minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bashtan.library.controller.MainController">
+    <children>
+        <MenuBar layoutY="2.0" AnchorPane.bottomAnchor="373.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="2.0">
+            <menus>
+                <Menu fx:id="userMenu" mnemonicParsing="false" text="userMenu">
+                    <items>
+                        <Menu fx:id="settingMenu" mnemonicParsing="false" text="settingMenu">
+                            <items>
+                                <MenuItem fx:id="userMenuItem" mnemonicParsing="false" onAction="#onActionUserMenuItem"
+                                          text="userMenuItem"/>
+                            </items>
+                        </Menu>
+                        <Menu fx:id="serverMenu" mnemonicParsing="false" text="serverMenu">
+                            <items>
+                                <MenuItem fx:id="startServerMenuItem" mnemonicParsing="false"
+                                          onAction="#onActionStartServerMenuItem" text="startServerMenuItem"/>
+                                <MenuItem fx:id="stopServerMenuItem" mnemonicParsing="false"
+                                          onAction="#onActionStopServerMenuItem" text="stopServerMenuItem"/>
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu fx:id="libraryMenu" mnemonicParsing="false" text="libraryMenu">
+                    <items>
+                        <MenuItem fx:id="humanMenuItem" mnemonicParsing="false" onAction="#onActionHumanMenuItem"
+                                  text="humanMenuItem"/>
+                        <MenuItem fx:id="bookMenuItem" mnemonicParsing="false" onAction="#onActionBookMenuItem"
+                                  text="bookMenuItem"/>
+                        <MenuItem fx:id="giveBookMenuItem" mnemonicParsing="false" onAction="#onActionGiveBookMenuItem"
+                                  text="giveBookMenuItem"/>
+                        <MenuItem fx:id="getBookMenuItem" mnemonicParsing="false" onAction="#onActionGetBookMenuItem"
+                                  text="getBookMenuItem"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="exitMenu" mnemonicParsing="false" text="exitMenu">
+                    <items>
+                        <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#onActionExitMenuItem"
+                                  text="exitMenuItem"/>
+                    </items>
+                </Menu>
+                <Menu fx:id="helpMenu" mnemonicParsing="false" text="helpMenu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <GridPane layoutY="25.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <GridPane alignment="CENTER_LEFT">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.8000244140625" minWidth="10.0"
+                                           prefWidth="256.00001220703126"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.79998779296875" minWidth="10.0"
+                                           prefWidth="44.79998779296875"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="titleHumanLabel" alignment="CENTER" contentDisplay="CENTER" text="titleHumanLabel"
+                               textAlignment="CENTER" textFill="#1e3ca1" textOverrun="CENTER_ELLIPSIS"
+                               GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="humanLabel" text="humanLabel" textFill="#1e3ca1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="humanFlagLabel" text="humanFlagLabel" textFill="#1e3ca1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="humanLengthLabel" text="0" textFill="#1e3ca1" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="humanFlagLengthLabel" text="0" textFill="#1e3ca1" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                    </children>
+                </GridPane>
+                <GridPane alignment="CENTER_LEFT" GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.8000244140625" minWidth="10.0"
+                                           prefWidth="256.00001220703126"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.79998779296875" minWidth="10.0"
+                                           prefWidth="44.79998779296875"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="titleBookLabel" alignment="CENTER" contentDisplay="CENTER" text="titleBookLabel"
+                               textAlignment="CENTER" textFill="#1e3ca1" textOverrun="CENTER_ELLIPSIS"
+                               GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="bookLabel" text="bookLabel" textFill="#1e3ca1" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="bookFlagLabel" text="bookFlagLabel" textFill="#1e3ca1" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="bookLengthLabel" text="0" textFill="#1e3ca1" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="bookFlagLengthLabel" text="0" textFill="#1e3ca1" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="5.0"/>
+                            </GridPane.margin>
+                        </Label>
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT"/>
+    </cursor>
+</AnchorPane>

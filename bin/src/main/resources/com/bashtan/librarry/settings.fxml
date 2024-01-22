@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="350.0" maxWidth="500.0" minHeight="350.0" minWidth="500.0" prefHeight="350.0"
+            prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.bashtan.library.controller.SettingsController">
+    <children>
+        <GridPane alignment="CENTER" layoutX="74.0" layoutY="81.0" AnchorPane.bottomAnchor="0.0"
+                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="93.19998779296876" minHeight="6.7999910354614315"
+                                prefHeight="33.599999999999994" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="220.2" minHeight="10.0" prefHeight="220.2" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="109.59998779296876" minHeight="10.0" prefHeight="79.19996337890626"
+                                vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label fx:id="titleLabel" text="titleLabel" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="Times New Roman" size="25.0"/>
+                    </font>
+                </Label>
+                <GridPane fx:id="action1GridPane" alignment="CENTER" prefHeight="143.0" prefWidth="502.0"
+                          visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                          GridPane.valignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.39996337890625" minWidth="10.0"
+                                           prefWidth="139.20001220703125"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.79998779296875" minWidth="10.0"
+                                           prefWidth="260.79998779296875"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="hostLabel" text="hostLabel" GridPane.halignment="LEFT" GridPane.rowIndex="1"
+                               GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="loginBDLabel" text="loginBDLabel" GridPane.halignment="LEFT" GridPane.rowIndex="2"
+                               GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="passwordBDLabel" text="passwordBDLabel" GridPane.halignment="LEFT"
+                               GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="adminLoginLabel" text="adminLoginLabel" GridPane.halignment="LEFT"
+                               GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="adminPasswordLabel" text="adminPasswordLabel" GridPane.halignment="LEFT"
+                               GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="hostTextField" onAction="#onActionHostTextField" GridPane.columnIndex="1"
+                                   GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <opaqueInsets>
+                                <Insets left="5.0" right="5.0"/>
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="loginBDTextField" onAction="#onActionLoginBDTextField"
+                                   GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2"
+                                   GridPane.valignment="CENTER">
+                            <opaqueInsets>
+                                <Insets left="5.0" right="5.0"/>
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <PasswordField fx:id="passwordBDPasswordField" onAction="#onActionPasswordBDPasswordField"
+                                       GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3"
+                                       GridPane.valignment="CENTER">
+                            <opaqueInsets>
+                                <Insets left="5.0" right="5.0"/>
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </PasswordField>
+                        <TextField fx:id="adminLoginTextField" onAction="#onActionAdminLoginTextField"
+                                   GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4"
+                                   GridPane.valignment="CENTER">
+                            <opaqueInsets>
+                                <Insets left="5.0" right="5.0"/>
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <PasswordField fx:id="adminPasswordPasswordField"
+                                       onAction="#onActionAdminPasswordBDPasswordField" GridPane.columnIndex="1"
+                                       GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                            <opaqueInsets>
+                                <Insets left="5.0" right="5.0"/>
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                        </PasswordField>
+                        <RadioButton fx:id="loadRadioButton" mnemonicParsing="false" onAction="#onActionLoadRadioButton"
+                                     text="loadRadioButton" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                            <font>
+                                <Font name="Times New Roman" size="14.0"/>
+                            </font>
+                        </RadioButton>
+                        <RadioButton fx:id="createRadioButton" mnemonicParsing="false"
+                                     onAction="#onActionCreateRadioButton" text="createRadioButton"
+                                     GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0" right="10.0"/>
+                            </GridPane.margin>
+                            <font>
+                                <Font name="Times New Roman" size="14.0"/>
+                            </font>
+                        </RadioButton>
+                    </children>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </GridPane>
+                <GridPane GridPane.rowIndex="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="okButton" mnemonicParsing="false" onAction="#okButtonOnAction" text="okButton"
+                                textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnActon"
+                                text="cancelButton" textAlignment="CENTER" GridPane.columnIndex="1"
+                                GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <font>
+                                <Font name="Times New Roman" size="18.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </GridPane>
+                <GridPane fx:id="action2GridPane" visible="false" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="hostBDLabel" text="hostBDLabel" textAlignment="CENTER" GridPane.halignment="LEFT"
+                               GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <CheckBox fx:id="deleteCheckBox" mnemonicParsing="false" text="deleteCheckBox"
+                                  GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="10.0"/>
+                            </GridPane.margin>
+                        </CheckBox>
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

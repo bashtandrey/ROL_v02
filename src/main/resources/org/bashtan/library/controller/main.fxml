@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" focusTraversable="true" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.bashtan.library.controller.MainController">
+    <children>
+        <MenuBar layoutY="2.0" AnchorPane.bottomAnchor="373.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+            <menus>
+                <Menu fx:id="userMenu" mnemonicParsing="false" text="userMenu">
+                    <items>
+                          <MenuItem fx:id="userMenuItem" mnemonicParsing="false" onAction="#onActionUserMenuItem" text="userMenuItem" />
+                    </items>
+                </Menu>
+                <Menu fx:id="libraryMenu" mnemonicParsing="false" text="libraryMenu">
+                    <items>
+                        <MenuItem fx:id="humanMenuItem" mnemonicParsing="false" onAction="#onActionHumanMenuItem" text="humanMenuItem" />
+                        <MenuItem fx:id="bookMenuItem" mnemonicParsing="false" onAction="#onActionBookMenuItem" text="bookMenuItem" />
+                        <MenuItem fx:id="giveBookMenuItem" mnemonicParsing="false" onAction="#onActionGiveBookMenuItem" text="giveBookMenuItem" />
+                        <MenuItem fx:id="getBookMenuItem" mnemonicParsing="false" onAction="#onActionGetBookMenuItem" text="getBookMenuItem" />
+                    </items>
+                </Menu>
+                <Menu fx:id="exitMenu" mnemonicParsing="false" text="exitMenu">
+                    <items>
+                        <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#onActionExitMenuItem" text="exitMenuItem" />
+                    </items>
+                </Menu>
+                <Menu fx:id="helpMenu" mnemonicParsing="false" text="helpMenu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+</AnchorPane>
